@@ -42,7 +42,7 @@ def turn(board)
     display_board(board)
   else
     tracker = 0
-    while valid_move?(board, index) == false
+    while tracker = 0
       turn(board)
     end
   end
