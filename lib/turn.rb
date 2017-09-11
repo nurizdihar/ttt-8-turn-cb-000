@@ -32,15 +32,15 @@ def input_to_index(input)
   return index
 end
 
-def turn(board, index, char = "X")
+def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
-  if valid_move?(board, input_to_index(input))
+  if valid_move?(board, index)
     move(board, index, char = "X")
     display_board(board)
   else
-    until valid_move?(board, input_to_index(input)) == true
-      turn(board, index, char = "X")
+    until valid_move?(board, index) == true
+      turn(board)
     end
   end
 end
