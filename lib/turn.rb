@@ -40,7 +40,7 @@ def turn(board, index, char = "X")
     display_board(board)
   else
     until valid_move?(board, input_to_index(input)) == true
-      turn
+      turn(board, index, char = "X")
     end
   end
 end
