@@ -9,6 +9,8 @@ end
 def valid_move?(board, index)
   if !position_taken?(board, index) && 0 <= index && 8 >= index
     return true
+  else
+    return false
   end
 end
 
@@ -29,3 +31,17 @@ def input_to_index(input)
   index = number - 1
   return index
 end
+
+def turn 
+  puts "Please enter 1-9:"
+  input = gets.strip
+  if valid_move?(board, input_to_index(input))
+    move(board, index, char = "X")
+    display_board(board)
+  else
+    until valid_move?(board, input_to_index(input)) == true
+      turn
+    end
+  end
+end
+      
