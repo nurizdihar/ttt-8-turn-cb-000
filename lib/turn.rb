@@ -42,7 +42,7 @@ def turn(board)
     display_board(board)
   else
     tracker = 0
-    while tracker = 0
+    until tracker = 1
       turn(board)
     end
   end
