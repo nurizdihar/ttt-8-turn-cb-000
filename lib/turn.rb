@@ -39,7 +39,7 @@ def turn(board)
   if valid_move?(board, index)
     move(board, index, char = "X")
     display_board(board)
-    break
+  break
   else
     while valid_move?(board, index) == false
       turn(board)
