@@ -37,13 +37,9 @@ def turn(board)
   input = gets.strip
   index = input_to_index(input)
   if valid_move?(board, index) == true
-    tracker = 1
     move(board, index, char = "X")
     display_board(board)
   else
-    tracker = 0
-    until tracker = 1
-      turn(board)
-    end
+    turn(board)
   end
 end
